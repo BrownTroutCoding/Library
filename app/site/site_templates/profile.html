@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="bg text-light text-center shadow" id="profile-header">
+    <div class="container p-5 bg">
+        <div class="row">
+            <div class="d-md-flexbg align-items-center justify-content-evenly">
+                <h1 class="col text-center">Here are your profile details</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-center">
+    <div class="container p-10">
+        <div class="row"><br>
+            <ul class="list-group">
+                <li class="list-group-item">Email: {{ current_user.email }}</li>
+                <li class="list-group-item">Token: {{ current_user.token }} </li> 
+            </ul>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-4"></div>
+            <div class="col-3 p-10">
+                <img src="../../static/Images/undraw_bibliophile_re_xarc.svg" class="d-flex align-items-center justify-content-center p-50 img-fluid" alt="">
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

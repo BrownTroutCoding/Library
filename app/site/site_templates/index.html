@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<!-- Main Header -->
+<section class="bg text-light text-center shadow" id="menu">
+    <div class="container p-5 bg">
+        <div class="row">
+            <div class="d-md-flexbg align-items-center justify-content-evenly">
+                <h1 class="col text-center">Welcome to your book library!</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- body -->
+{% if not current_user.is_authenticated %}
+<!-- buttons -->
+<div id="buttons">
+    <button class="btn-primary btn"><a href="{{ url_for('auth.signin') }}">Sign In</button></a>
+    <button class="btn-primary btn"><a href="{{ url_for('auth.signup') }}">Sign Up</button></a>
+</div>
+{% endif %}
+<!-- body -->
+<section class="text-center">
+    <div class="container p-5">
+        <div class="row">
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="../../static/Images/undraw_book_reading_re_fu2c.svg" class="img-fluid p-5" alt="cars" id="index_img">
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+<footer>
+    <h2>Made by Brown Trout Coding</h2>
+</footer>
+{% endblock %}
